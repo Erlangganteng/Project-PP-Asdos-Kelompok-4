@@ -43,6 +43,8 @@ int main() {
             cin >> olahraga[i];
         }
         cout << endl;
+        
+    }
         double totalTidur = 0;
             int totalAir = 0;
             int totalOlahraga = 0;
@@ -74,5 +76,18 @@ int main() {
             }
         
             double skor = (skorTidur * 0.4) + (skorAir * 0.3) + (skorOlahraga * 0.3);
+
+    cout << "==========================================\n";
+    cout << "          REKAP DATA MINGGUAN\n";
+    cout << "==========================================\n";
+    cout << "Hari\tTidur(jam)\tAir(gelas)\tOlahraga(mnt)\n";
+    cout << "------------------------------------------\n";
+    for (int i = 0; i < hari; i++) {
+        cout << (i + 1) << "\t" << tidur[i] << "\t\t" << air[i] << "\t\t" << olahraga[i] << "\n";
     }
+    cout << "------------------------------------------\n";
+    cout << "Rata-rata tidur     : " << rataTidur << " jam/hari\n";
+    cout << "Total air           : " << totalAir << " gelas (rata-rata " << rataAir << "/hari)\n";
+    cout << "Total olahraga      : " << totalOlahraga << " menit (rata-rata " << rataOlahraga << "/hari)\n";
+    cout << "Skor kesehatan      : " << skor << "%\n";
 }
