@@ -43,5 +43,36 @@ int main() {
             cin >> olahraga[i];
         }
         cout << endl;
+        double totalTidur = 0;
+            int totalAir = 0;
+            int totalOlahraga = 0;
+        
+            for (int i = 0; i < hari; i++) {
+                totalTidur += tidur[i];
+                totalAir += air[i];
+                totalOlahraga += olahraga[i];
+            }
+        
+          
+            double rataTidur = totalTidur / hari;
+            double rataAir = (double)totalAir / hari;
+            double rataOlahraga = (double)totalOlahraga / hari;
+        
+            double skorTidur = rataTidur / targetTidur * 100;
+            if (skorTidur > 100) {
+                skorTidur = 100;
+            }
+        
+            double skorAir = rataAir / targetAir * 100;
+            if (skorAir > 100) {
+                skorAir = 100;
+            }
+        
+            double skorOlahraga = rataOlahraga / targetOlahraga * 100;
+            if (skorOlahraga > 100) {
+                skorOlahraga = 100;
+            }
+        
+            double skor = (skorTidur * 0.4) + (skorAir * 0.3) + (skorOlahraga * 0.3);
     }
 }
