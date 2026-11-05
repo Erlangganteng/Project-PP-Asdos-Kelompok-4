@@ -90,8 +90,6 @@ int main() {
     cout << "Total air           : " << totalAir << " gelas (rata-rata " << rataAir << "/hari)\n";
     cout << "Total olahraga      : " << totalOlahraga << " menit (rata-rata " << rataOlahraga << "/hari)\n";
     cout << "Skor kesehatan      : " << skor << "%\n";
-    cout << "========================================\n";
-
     if (rataTidur < 6) {
         cout << "[PERINGATAN] Rata-rata tidur kurang dari 6 jam!\n";
         cout << "  Saran: Kurangi begadang dan usahakan tidur 7-8 jam per hari.\n";
@@ -101,29 +99,10 @@ int main() {
     } else {
         cout << "[BAIK] Durasi tidur sudah ideal. Pertahankan!\n";
     }
-
     if (rataAir < targetAir) {
         cout << "[PERINGATAN] Konsumsi air di bawah target (" << targetAir << " gelas/hari)!\n";
         cout << "  Saran: Bawa botol minum dan biasakan minum secara rutin.\n";
     } else {
         cout << "[BAIK] Konsumsi air sudah memenuhi target. Pertahankan!\n";
     }
-
-    if (rataOlahraga < targetOlahraga) {
-        cout << "[PERINGATAN] Aktivitas fisik minim (di bawah " << targetOlahraga << " menit/hari)!\n";
-        cout << "  Saran: Luangkan waktu jalan kaki, jogging, atau peregangan ringan.\n";
-    } else {
-        cout << "[BAIK] Aktivitas fisik sudah memadai. Pertahankan!\n";
-    }
-
-    cout << "\nKesimpulan: ";
-    if (skor >= 80) {
-        cout << "Kebiasaan sehat Anda SANGAT BAIK.\n";
-    } else if (skor >= 60) {
-        cout << "Kebiasaan sehat Anda CUKUP BAIK, masih bisa ditingkatkan.\n";
-    } else {
-        cout << "Kebiasaan sehat Anda PERLU DIPERBAIKI.\n";
-    }
-
-    return 0;
 }
